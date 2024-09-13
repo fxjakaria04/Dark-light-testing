@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output/tailwindcss.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+<body class="flex items-center h-screen justify-center bg-gray-50 duration-1000 dark:bg-gray-900 flex-col">
+    
+
+
+  
+    <div class="mood inline">
+        <button onclick="mood(this)" class=" px-5 py-2 bg-gray-800 rounded-l-xl text-white">Dark</button>
+        <button onclick="mood(this)" class=" px-5 py-2 rounded-r-xl bg-gray-300">Light</button>
+    </div>
+    <h1 class="text-gray-900 dark:text-white my-3">adf</h1>
+
+    <script>
+        const DOME = document.querySelector("html");
+        const heading = document.querySelector("h1");
+            function mood(e){
+                console.log(e.innerHTML)
+                if(e.innerHTML === "Dark"){
+                    DOME.classList.add("dark")
+                    heading.innerHTML = "Dark Mood Enabled";
+                }else if (e.innerHTML === "Light"){
+                    DOME.classList.remove("dark")
+                    heading.innerHTML = "Light mood Enabled";
+                }
+            }
+            if(DOME.classList.contains("Dark")){
+                    heading.innerHTML = "Dark Mood Enabled";
+                }else{
+                    heading.innerHTML = "Light mood Enabled";
+                }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+
+</body>
+</html>
